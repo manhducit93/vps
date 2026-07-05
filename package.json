@@ -1,7 +1,7 @@
 {
   "name": "vps-manager",
   "version": "1.0.0",
-  "description": "VPS Management System by Hiếu Dz - Based on DuckNoVis",
+  "description": "VPS Management System by Hi?u Dz - Based on DuckNoVis",
   "main": "api/create-vps.js",
   "type": "module",
   "scripts": {
@@ -24,6 +24,6 @@
     "vnc",
     "remote-desktop"
   ],
-  "author": "Hiếu Dz",
+  "author": "Hi?u Dz",
   "license": "MIT"
 }
