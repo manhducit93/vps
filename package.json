@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "VPS Management System by Hiếu Dz - Based on DuckNoVis",
   "main": "api/create-vps.js",
-  "type": "module",
   "scripts": {
     "dev": "node -e \"console.log('Use \\\"npm run dev:vercel\\\" to start the Vercel dev server locally')\"",
     "dev:vercel": "vercel dev"
