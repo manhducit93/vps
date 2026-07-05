@@ -1,18 +1,16 @@
 {
   "name": "vps-manager",
   "version": "1.0.0",
-  "description": "VPS Management System by Hi?u Dz - Based on DuckNoVis",
+  "description": "VPS Management System by Hiếu Dz - Based on DuckNoVis",
   "main": "api/create-vps.js",
   "type": "module",
   "scripts": {
-    "dev": "vercel dev"
+    "dev": "node -e \"console.log('Use \\\"npm run dev:vercel\\\" to start the Vercel dev server locally')\"",
+    "dev:vercel": "vercel dev"
   },
   "dependencies": {
     "@octokit/rest": "^21.0.1",
     "libsodium-wrappers": "^0.7.13"
-  },
-  "devDependencies": {
-    "vercel": "^34.0.0"
   },
   "engines": {
     "node": "22.x"
@@ -24,6 +22,6 @@
     "vnc",
     "remote-desktop"
   ],
-  "author": "Hi?u Dz",
+  "author": "Hiếu Dz",
   "license": "MIT"
 }
