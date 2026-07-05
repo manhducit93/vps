@@ -1,7 +1,7 @@
 # VPS Manager - Hiếu Dz
 
 > **Based on DuckNoVis Technology**  
-> **Domain**: hieuvn.xyz/*
+> **Domain**: hieuvn.xyz/\*
 
 ## 🚀 Giới thiệu
 
@@ -10,7 +10,7 @@ VPS Manager là một hệ thống quản lý VPS tự động được phát tr
 ## ✨ Tính năng
 
 - 🖥️ **VPS Windows Server** với giao diện đồ họa đầy đủ
-- 🌐 **Truy cập qua Web** sử dụng noVNC 
+- 🌐 **Truy cập qua Web** sử dụng noVNC
 - 🔄 **Tự động khởi động lại** sau 5.5 giờ
 - 🛡️ **Bảo mật** với mật khẩu tùy chỉnh
 - 📱 **Giao diện hiện đại** và responsive
@@ -35,28 +35,33 @@ vps-manager/
 ## 🛠️ Cài đặt và triển khai
 
 ### 1. Clone dự án
+
 ```bash
 git clone <repository-url>
 cd vps-manager
 ```
 
 ### 2. Cài đặt dependencies
+
 ```bash
 npm install
 ```
 
 ### 3. Chạy local (development)
+
 ```bash
 npm run dev
 ```
 
 ### 4. Triển khai lên Vercel
+
 1. Push code lên GitHub repository
 2. Kết nối repository với Vercel
 3. Deploy tự động sẽ được kích hoạt
 4. Domain sẽ có dạng: `https://your-project.vercel.app`
 
 ### 5. Cấu hình domain tùy chỉnh
+
 - Trong Vercel Dashboard, vào Settings > Domains
 - Thêm domain `hieuvn.xyz` hoặc subdomain
 - Cấu hình DNS records theo hướng dẫn
@@ -64,6 +69,7 @@ npm run dev
 ## 📋 Yêu cầu
 
 ### GitHub Token
+
 - Cần có **Personal Access Token** từ GitHub
 - Token phải có quyền:
   - `repo` (full repository access)
@@ -71,6 +77,7 @@ npm run dev
   - `write:packages` (nếu cần)
 
 ### Tạo GitHub Token
+
 1. Vào GitHub Settings > Developer settings > Personal access tokens
 2. Generate new token (classic)
 3. Chọn scopes cần thiết
@@ -79,9 +86,11 @@ npm run dev
 ## 🔧 API Endpoints
 
 ### POST `/api/create-vps`
+
 Tạo VPS mới
 
 **Body:**
+
 ```json
 {
   "github_token": "ghp_xxxxxxxxxxxxxxxxxxxx"
@@ -89,6 +98,7 @@ Tạo VPS mới
 ```
 
 **Response:**
+
 ```json
 {
   "status": "success",
@@ -99,9 +109,11 @@ Tạo VPS mới
 ```
 
 ### GET `/api/vpsuser`
+
 Lấy danh sách VPS đang hoạt động
 
 **Response:**
+
 ```json
 {
   "status": "success",
@@ -116,6 +128,7 @@ Lấy danh sách VPS đang hoạt động
 ```
 
 ### POST `/api/vpsuser`
+
 Lưu hoặc lấy thông tin VPS user
 
 ## 🎯 Cách sử dụng
@@ -146,18 +159,23 @@ Lưu hoặc lấy thông tin VPS user
 ## 🛠️ Customization
 
 ### Thay đổi mật khẩu VNC
+
 Sửa trong file `api/create-vps.js`:
+
 ```powershell
 VALUE_OF_PASSWORD=your-new-password
 ```
 
 ### Thay đổi thời gian chạy
+
 Sửa biến `$totalMinutes` trong workflow:
+
 ```powershell
 $totalMinutes = 330  # 5.5 giờ
 ```
 
 ### Thêm software
+
 Thêm các lệnh cài đặt trong phần workflow setup.
 
 ## 🎨 Giao diện
@@ -171,6 +189,7 @@ Thêm các lệnh cài đặt trong phần workflow setup.
 ## 📝 Changelog
 
 ### Version 1.0.0
+
 - ✅ Giao diện web hoàn chỉnh
 - ✅ API tạo VPS tự động
 - ✅ Quản lý danh sách VPS
@@ -181,6 +200,7 @@ Thêm các lệnh cài đặt trong phần workflow setup.
 ## 👨‍💻 Tác giả
 
 **Hiếu Dz**
+
 - Website: hieuvn.xyz
 - Based on: DuckNoVis Technology
 
@@ -191,10 +211,11 @@ MIT License - Tự do sử dụng và chỉnh sửa
 ## 🆘 Hỗ trợ
 
 Nếu gặp vấn đề, vui lòng:
+
 1. Kiểm tra GitHub Token có đủ quyền
 2. Xem logs trong GitHub Actions
 3. Đảm bảo repository không bị rate limit
 
 ---
 
-*Developed with ❤️ by Hiếu Dz | Based on DuckNoVis Technology*
+_Developed with ❤️ by Hiếu Dz | Based on DuckNoVis Technology_

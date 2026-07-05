@@ -1,7 +1,7 @@
 {
   "name": "vps-manager",
   "version": "1.0.0",
-  "description": "VPS Management System by Hiếu Dz - Based on DuckNoVis",
+  "description": "VPS Management System by Đức Dz",
   "main": "api/create-vps.js",
   "scripts": {
     "dev": "node -e \"console.log('Use \\\"npm run dev:vercel\\\" to start the Vercel dev server locally')\"",
