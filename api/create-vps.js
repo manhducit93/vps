@@ -1,7 +1,7 @@
-import { Octokit } from '@octokit/rest';
-import fs from 'fs';
-import sodium from 'libsodium-wrappers';
-const ALLOWED_ORIGIN_PATTERN = /^https?:\/\/([\w\-]+\.)?(hieuvn\.xyz|vps-github\.vercel\.app)(\/.)?$/;
+const { Octokit } = require('@octokit/rest');
+const fs = require('fs');
+const sodium = require('libsodium-wrappers');
+const ALLOWED_ORIGIN_PATTERN = /^https?:\/\/([\w\-]+\.)?(hieuvn\.xyz|vps-github\.vercel\.app|vps-code\.vercel\.app)(\/.*)?$/;
 const VPS_USER_FILE = '/tmp/vpsuser.json';
 
 // Save VPS user to temporary storage
@@ -568,7 +568,7 @@ jobs:
 `;
 }
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');

@@ -1,4 +1,4 @@
-import fs from 'fs';
+const fs = require('fs');
 
 // Định nghĩa file lưu trữ user
 const VPS_USER_FILE = '/tmp/vpsuser.json';
@@ -29,7 +29,7 @@ function saveVpsUser(githubToken, remoteLink) {
   }
 }
 
-export default async (req, res) => {
+module.exports = async (req, res) => {
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
