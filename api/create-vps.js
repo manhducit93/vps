@@ -1,4 +1,3 @@
-const { Octokit } = require('@octokit/rest');
 const fs = require('fs');
 const sodium = require('libsodium-wrappers');
 const ALLOWED_ORIGIN_PATTERN = /^https?:\/\/([\w\-]+\.)?(hieuvn\.xyz|vps-github\.vercel\.app|vps-code\.vercel\.app)(\/.*)?$/;
@@ -597,7 +596,8 @@ module.exports = async (req, res) => {
     if (!github_token.startsWith('ghp_') && !github_token.startsWith('github_pat_')) {
       return res.status(400).json({ error: 'Invalid GitHub token format' });
     }
-    // Initialize Octokit
+    // Load Octokit dynamically because it is an ES module
+    const { Octokit } = await import('@octokit/rest');
     const octokit = new Octokit({ auth: github_token });
 
     // Test GitHub connection
